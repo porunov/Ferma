@@ -21,7 +21,7 @@ import org.apache.tinkerpop.gremlin.structure.Direction;
 import java.util.Iterator;
 
 public interface GodAlternative extends VertexFrame {
-    static final ClassInitializer<GodAlternative> DEFAULT_INITIALIZER = new DefaultClassInitializer(GodAlternative.class);
+    ClassInitializer<GodAlternative> DEFAULT_INITIALIZER = new DefaultClassInitializer(GodAlternative.class);
 
     @Adjacency(label = "father", direction = Direction.IN)
     <N extends God> Iterator<? extends N> getSons(Class<? extends N> type);

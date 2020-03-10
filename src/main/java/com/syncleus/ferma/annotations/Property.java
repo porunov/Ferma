@@ -43,5 +43,5 @@ public @interface Property {
 
     enum Operation {
         GET, SET, REMOVE, AUTO
-    };
+    }
 }

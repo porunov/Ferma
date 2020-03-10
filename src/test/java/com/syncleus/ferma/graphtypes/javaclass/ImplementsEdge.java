@@ -25,7 +25,7 @@ import com.syncleus.ferma.annotations.OutVertex;
  * @author rqpa
  */
 public interface ImplementsEdge extends JavaTypeRelationsEdge {
-    public static final ClassInitializer<ImplementsEdge> DEFAULT_INITIALIZER = new DefaultClassInitializer<>(ImplementsEdge.class);
+    ClassInitializer<ImplementsEdge> DEFAULT_INITIALIZER = new DefaultClassInitializer<>(ImplementsEdge.class);
     
     @InVertex
     JavaInterfaceVertex getInterface();

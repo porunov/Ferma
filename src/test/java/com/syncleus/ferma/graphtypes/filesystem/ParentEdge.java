@@ -25,11 +25,11 @@ import com.syncleus.ferma.annotations.OutVertex;
  * @author rqpa
  */
 public interface ParentEdge {
-    public static final ClassInitializer<ParentEdge> DEFAULT_INITIALIZER = new DefaultClassInitializer<>(ParentEdge.class);
+    ClassInitializer<ParentEdge> DEFAULT_INITIALIZER = new DefaultClassInitializer<>(ParentEdge.class);
     
     @InVertex
-    public FileVertex getParent();
+    FileVertex getParent();
     
     @OutVertex
-    public FileVertex getChild();
+    FileVertex getChild();
 }

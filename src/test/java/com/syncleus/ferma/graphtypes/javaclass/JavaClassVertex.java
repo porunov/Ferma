@@ -33,23 +33,23 @@ import org.apache.tinkerpop.gremlin.structure.Direction;
  */
 public interface JavaClassVertex extends JavaTypeVertex {
 
-    public static final ClassInitializer<JavaClassVertex> DEFAULT_INITIALIZER = new JavaTypeVertexInitializer<>(JavaClassVertex.class);
+    ClassInitializer<JavaClassVertex> DEFAULT_INITIALIZER = new JavaTypeVertexInitializer<>(JavaClassVertex.class);
     
     @Incidence(label = "extends", direction = Direction.OUT)
-    public <T extends ExtendsEdge> T getSuperClassEdge(Class<T> ofType);
+    <T extends ExtendsEdge> T getSuperClassEdge(Class<T> ofType);
     
     @Incidence(label = "extends", direction = Direction.OUT)
-    public AbstractEdgeFrame getSuperClassTEdge();
+    AbstractEdgeFrame getSuperClassTEdge();
     
     // Makes sense to use it with singleton iterator only
     @Adjacency(label = "extends", direction = Direction.OUT)
-    public void setSuperClasses(Iterator<JavaClassVertex> superClasses);
+    void setSuperClasses(Iterator<JavaClassVertex> superClasses);
     
     @Incidence(label = "implements", direction = Direction.OUT, operation = Incidence.Operation.ADD)
-    public TEdge implementNewInterface();
+    TEdge implementNewInterface();
     
     @Incidence(label = "implements", direction = Direction.OUT, operation = Incidence.Operation.ADD)
-    public TEdge implementNewType(ClassInitializer<? extends JavaInterfaceVertex> typeInitializer);
+    TEdge implementNewType(ClassInitializer<? extends JavaInterfaceVertex> typeInitializer);
     
     @Incidence(label = "implements", direction = Direction.OUT, operation = Incidence.Operation.ADD)
     TEdge implementInterface(JavaInterfaceVertex iface);

@@ -27,8 +27,8 @@ import org.apache.tinkerpop.gremlin.structure.Direction;
  * @author rqpa
  */
 public interface JavaTypeIllegalVertex5 extends JavaTypeVertex {
-    public static final ClassInitializer<JavaTypeIllegalVertex5> DEFAULT_INITIALIZER = new JavaTypeVertexInitializer<>(JavaTypeIllegalVertex5.class);
+    ClassInitializer<JavaTypeIllegalVertex5> DEFAULT_INITIALIZER = new JavaTypeVertexInitializer<>(JavaTypeIllegalVertex5.class);
     
     @Incidence(label = "implements", direction = Direction.OUT, operation = Incidence.Operation.REMOVE)
-    public void removeAllImplementsEdges();
+    void removeAllImplementsEdges();
 }

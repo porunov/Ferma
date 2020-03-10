@@ -88,8 +88,8 @@ public abstract class Comparators {
     private static final class IdAsLongComparator implements Comparator<ElementFrame> {
         @Override
         public int compare(final ElementFrame t, final ElementFrame t1) {
-            final Long c1 = Long.parseLong((String) t.getId());
-            final Long c2 = Long.parseLong((String) t1.getId());
+            final Long c1 = Long.parseLong(t.getId());
+            final Long c2 = Long.parseLong(t1.getId());
 
             return c1.compareTo(c2);
         }

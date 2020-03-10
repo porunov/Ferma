@@ -30,11 +30,11 @@ import org.apache.tinkerpop.gremlin.structure.Direction;
  * @author rqpa
  */
 public interface JavaTypeIllegalVertex9 extends JavaTypeVertex {
-    public static final ClassInitializer<JavaTypeIllegalVertex9> DEFAULT_INITIALIZER = new JavaTypeVertexInitializer<>(JavaTypeIllegalVertex9.class);
+    ClassInitializer<JavaTypeIllegalVertex9> DEFAULT_INITIALIZER = new JavaTypeVertexInitializer<>(JavaTypeIllegalVertex9.class);
     
     @Adjacency(label = "implements", direction = Direction.OUT)
-    public <T extends ImplementsEdge> List<T> addImplEdge(
-            JavaInterfaceVertex impltemented1,
-            JavaInterfaceVertex impltemented2,
-            JavaInterfaceVertex impltemented3);
+    <T extends ImplementsEdge> List<T> addImplEdge(
+        JavaInterfaceVertex impltemented1,
+        JavaInterfaceVertex impltemented2,
+        JavaInterfaceVertex impltemented3);
 }

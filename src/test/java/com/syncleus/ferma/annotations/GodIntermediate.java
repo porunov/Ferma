@@ -20,5 +20,5 @@ import com.syncleus.ferma.DefaultClassInitializer;
 
 @GraphElement
 public interface GodIntermediate extends God {
-    static final ClassInitializer<GodIntermediate> DEFAULT_INITIALIZER = new DefaultClassInitializer(GodIntermediate.class);
+    ClassInitializer<GodIntermediate> DEFAULT_INITIALIZER = new DefaultClassInitializer(GodIntermediate.class);
 }

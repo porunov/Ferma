@@ -24,7 +24,7 @@ import com.syncleus.ferma.VertexFrame;
  */
 public interface NetworkDeviceVertex extends VertexFrame {
     
-    public static final DefaultClassInitializer<NetworkDeviceVertex> DEFAULT_INITIALIZER = new DefaultClassInitializer<>(NetworkDeviceVertex.class);
+    DefaultClassInitializer<NetworkDeviceVertex> DEFAULT_INITIALIZER = new DefaultClassInitializer<>(NetworkDeviceVertex.class);
 
     String getName();
     void setName(String name);

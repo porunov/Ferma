@@ -29,7 +29,7 @@ import org.apache.tinkerpop.gremlin.structure.Direction;
  */
 public interface ComputerVertex extends NetworkDeviceVertex {
     
-    public static final ClassInitializer<ComputerVertex> DEFAULT_INITIALIZER = new DefaultClassInitializer<>(ComputerVertex.class);
+    ClassInitializer<ComputerVertex> DEFAULT_INITIALIZER = new DefaultClassInitializer<>(ComputerVertex.class);
     
     @Property(value = "name")
     @Override

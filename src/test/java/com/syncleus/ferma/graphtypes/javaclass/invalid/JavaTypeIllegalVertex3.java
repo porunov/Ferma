@@ -29,8 +29,8 @@ import org.apache.tinkerpop.gremlin.structure.Direction;
  * @author rqpa
  */
 public interface JavaTypeIllegalVertex3 extends JavaTypeVertex {
-    public static final ClassInitializer<JavaTypeIllegalVertex3> DEFAULT_INITIALIZER = new JavaTypeVertexInitializer<>(JavaTypeIllegalVertex3.class);
+    ClassInitializer<JavaTypeIllegalVertex3> DEFAULT_INITIALIZER = new JavaTypeVertexInitializer<>(JavaTypeIllegalVertex3.class);
     
     @Incidence(label = "implements", direction = Direction.OUT)
-    public ImplementsEdge getImplementsEdge(JavaInterfaceVertex implementedIface);
+    ImplementsEdge getImplementsEdge(JavaInterfaceVertex implementedIface);
 }

@@ -29,7 +29,7 @@ import com.syncleus.ferma.graphtypes.javaclass.invalid.OneArgGetInVertexEdge;
 
 public class InVertexMethodHandlerTest {
 
-    private static final Set<Class<?>> TEST_TYPES = new HashSet<>(Arrays.asList(new Class<?>[]{God.class, FatherEdge.class, GodExtended.class, FatherEdgeExtended.class}));
+    private static final Set<Class<?>> TEST_TYPES = new HashSet<>(Arrays.asList(God.class, FatherEdge.class, GodExtended.class, FatherEdgeExtended.class));
 
     @Test
     public void testGetSonEdges() {

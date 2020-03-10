@@ -27,7 +27,7 @@ import com.syncleus.ferma.annotations.OutVertex;
  */
 public interface NetworkConnectionEdge extends EdgeFrame {
     
-    public static final ClassInitializer<NetworkConnectionEdge> DEFAULT_INITIALIZER = new DefaultClassInitializer<>(NetworkConnectionEdge.class);
+    ClassInitializer<NetworkConnectionEdge> DEFAULT_INITIALIZER = new DefaultClassInitializer<>(NetworkConnectionEdge.class);
     
     @OutVertex
     ComputerVertex getFrom();

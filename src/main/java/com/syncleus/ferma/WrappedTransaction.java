@@ -39,17 +39,17 @@ public interface WrappedTransaction extends AutoCloseable {
     /**
      * Opens a transaction.
      */
-    public void open();
+    void open();
 
     /**
      * Commits a transaction.
      */
-    public void commit();
+    void commit();
 
     /**
      * Rolls back a transaction.
      */
-    public void rollback();
+    void rollback();
 
     /**
      * Creates a transaction that can be executed across multiple threads. The {@link WrappedFramedGraph} returned from this
@@ -60,22 +60,22 @@ public interface WrappedTransaction extends AutoCloseable {
      *
      * @return A new version of the graph which can be accessed in its own thread.
      */
-    public WrappedFramedGraph createThreadedTx();
+    WrappedFramedGraph createThreadedTx();
 
     /**
      * Determines if a transaction is currently open.
      *
      * @return true if currently open, false otherwise.
      */
-    public boolean isOpen();
+    boolean isOpen();
 
     /**
      * An internal function that signals a read or a write has occurred - not meant to be called directly by end users.
      */
-    public void readWrite();
+    void readWrite();
 
     @Override
-    public void close();
+    void close();
 
     /**
      * Adds a listener that is called back with a status when a commit or rollback is successful.  It is expected
@@ -84,19 +84,19 @@ public interface WrappedTransaction extends AutoCloseable {
      *
      * @param listener the transaction listener to be added
      */
-    public void addTransactionListener(final Consumer<org.apache.tinkerpop.gremlin.structure.Transaction.Status> listener);
+    void addTransactionListener(final Consumer<org.apache.tinkerpop.gremlin.structure.Transaction.Status> listener);
 
     /**
      * Removes a transaction listener.
      *
      * @param listener The listener to be removed.
      */
-    public void removeTransactionListener(final Consumer<org.apache.tinkerpop.gremlin.structure.Transaction.Status> listener);
+    void removeTransactionListener(final Consumer<org.apache.tinkerpop.gremlin.structure.Transaction.Status> listener);
 
     /**
      * Removes all transaction listeners.
      */
-    public void clearTransactionListeners();
+    void clearTransactionListeners();
 
     /**
      * Returns the raw wrapped tinkerpop transaction.

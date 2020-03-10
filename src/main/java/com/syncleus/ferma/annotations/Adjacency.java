@@ -64,5 +64,5 @@ public @interface Adjacency {
 
     enum Operation {
         GET, ADD, REMOVE, SET, AUTO
-    };
+    }
 }

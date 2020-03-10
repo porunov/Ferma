@@ -27,7 +27,7 @@ import org.junit.Before;
 
 public class AdjacencyMethodHandlerTest {
 
-    private static final Set<Class<?>> TEST_TYPES = new HashSet<>(Arrays.asList(new Class<?>[]{God.class, FatherEdge.class, GodExtended.class, GodAlternative.class}));
+    private static final Set<Class<?>> TEST_TYPES = new HashSet<>(Arrays.asList(God.class, FatherEdge.class, GodExtended.class, GodAlternative.class));
 
     private TinkerGraph godGraph;
 
@@ -493,7 +493,7 @@ public class AdjacencyMethodHandlerTest {
         Assert.assertEquals(childVertex.getElement().property("name").value(), "hercules");
         Assert.assertTrue(child instanceof GodExtended);
 
-        father.setSons(Collections.<God>emptySet().iterator());
+        father.setSons(Collections.emptyIterator());
         Assert.assertFalse(father.getSons(God.class).hasNext());
     }
 
@@ -696,7 +696,7 @@ public class AdjacencyMethodHandlerTest {
     @Test(expected = IllegalStateException.class)
     public void testGetSonsNoArgumentGetClass() {
 
-        final Set<Class<?>> exceptionTypes = new HashSet<>(Arrays.asList(new Class<?>[]{BadGetSonsArgumentClass.class}));
+        final Set<Class<?>> exceptionTypes = new HashSet<>(Arrays.asList(BadGetSonsArgumentClass.class));
 
         GodGraphLoader.load(godGraph);
 
@@ -711,7 +711,7 @@ public class AdjacencyMethodHandlerTest {
     @Test(expected = IllegalStateException.class)
     public void testGetSonsNoArgumentGetInterface() {
 
-        final Set<Class<?>> exceptionTypes = new HashSet<>(Arrays.asList(new Class<?>[]{BadGetSonsArgumentInterface.class}));
+        final Set<Class<?>> exceptionTypes = new HashSet<>(Arrays.asList(BadGetSonsArgumentInterface.class));
 
         GodGraphLoader.load(godGraph);
 
@@ -726,7 +726,7 @@ public class AdjacencyMethodHandlerTest {
     @Test(expected = IllegalStateException.class)
     public void testAddSonNoArgument() {
 
-        final Set<Class<?>> exceptionTypes = new HashSet<>(Arrays.asList(new Class<?>[]{BadAddSonNoArguments.class}));
+        final Set<Class<?>> exceptionTypes = new HashSet<>(Arrays.asList(BadAddSonNoArguments.class));
 
         GodGraphLoader.load(godGraph);
 
@@ -741,7 +741,7 @@ public class AdjacencyMethodHandlerTest {
     @Test(expected = IllegalStateException.class)
     public void testAddSonBadArgument() {
 
-        final Set<Class<?>> exceptionTypes = new HashSet<>(Arrays.asList(new Class<?>[]{BadAddSonArgument.class}));
+        final Set<Class<?>> exceptionTypes = new HashSet<>(Arrays.asList(BadAddSonArgument.class));
 
         GodGraphLoader.load(godGraph);
 
@@ -756,7 +756,7 @@ public class AdjacencyMethodHandlerTest {
     @Test(expected = IllegalStateException.class)
     public void testAddSonExtraArgument() {
 
-        final Set<Class<?>> exceptionTypes = new HashSet<>(Arrays.asList(new Class<?>[]{BadAddSonExtraArgument.class}));
+        final Set<Class<?>> exceptionTypes = new HashSet<>(Arrays.asList(BadAddSonExtraArgument.class));
 
         GodGraphLoader.load(godGraph);
 
@@ -771,7 +771,7 @@ public class AdjacencyMethodHandlerTest {
     @Test(expected = IllegalStateException.class)
     public void testBadSonMethodName() {
 
-        final Set<Class<?>> exceptionTypes = new HashSet<>(Arrays.asList(new Class<?>[]{BadSonMethodName.class}));
+        final Set<Class<?>> exceptionTypes = new HashSet<>(Arrays.asList(BadSonMethodName.class));
 
         GodGraphLoader.load(godGraph);
 

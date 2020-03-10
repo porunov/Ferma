@@ -28,8 +28,8 @@ import org.apache.tinkerpop.gremlin.structure.Direction;
  * @author rqpa
  */
 public interface JavaTypeIllegalVertex2 extends JavaTypeVertex {
-    public static final ClassInitializer<JavaTypeIllegalVertex2> DEFAULT_INITIALIZER = new JavaTypeVertexInitializer<>(JavaTypeIllegalVertex2.class);
+    ClassInitializer<JavaTypeIllegalVertex2> DEFAULT_INITIALIZER = new JavaTypeVertexInitializer<>(JavaTypeIllegalVertex2.class);
     
     @Incidence(label = "implements", direction = Direction.OUT, operation = Incidence.Operation.ADD)
-    public void implementThreeInterfaces(JavaInterfaceVertex i1, JavaInterfaceVertex i2, JavaInterfaceVertex i3);
+    void implementThreeInterfaces(JavaInterfaceVertex i1, JavaInterfaceVertex i2, JavaInterfaceVertex i3);
 }

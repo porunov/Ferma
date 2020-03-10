@@ -29,9 +29,9 @@ import org.apache.tinkerpop.gremlin.structure.Direction;
  * @author rqpa
  */
 public interface JavaTypeIllegalVertex15 extends JavaTypeVertex {
-    public static final ClassInitializer<JavaTypeIllegalVertex15> DEFAULT_INITIALIZER = new JavaTypeVertexInitializer<>(JavaTypeIllegalVertex15.class);
+    ClassInitializer<JavaTypeIllegalVertex15> DEFAULT_INITIALIZER = new JavaTypeVertexInitializer<>(JavaTypeIllegalVertex15.class);
     
     @Adjacency(label = "extends", direction = Direction.IN)
-    public <V extends JavaClassVertex, E extends ExtendsEdge> void getExtendingTypes(
-            V vertexType, E edgeType);
+    <V extends JavaClassVertex, E extends ExtendsEdge> void getExtendingTypes(
+        V vertexType, E edgeType);
 }

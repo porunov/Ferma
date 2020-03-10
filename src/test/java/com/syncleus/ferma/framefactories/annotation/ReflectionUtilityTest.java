@@ -66,7 +66,7 @@ public class ReflectionUtilityTest {
         public void doesAcceptEdgeFrame(EdgeFrame frame) {
             // Implementation is irrelevant
         }
-    };
+    }
 
     private static Method getMethod(Class<?> clazz, String methodName) {
         return Stream.of(clazz.getMethods())

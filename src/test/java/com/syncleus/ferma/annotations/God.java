@@ -24,7 +24,7 @@ import java.util.Set;
 
 @GraphElement
 public interface God extends VertexFrame {
-    static final ClassInitializer<God> DEFAULT_INITIALIZER = new DefaultClassInitializer(God.class);
+    ClassInitializer<God> DEFAULT_INITIALIZER = new DefaultClassInitializer(God.class);
 
     @Property("name")
     String getName();

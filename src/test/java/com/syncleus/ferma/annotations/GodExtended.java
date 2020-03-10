@@ -20,7 +20,7 @@ import com.syncleus.ferma.DefaultClassInitializer;
 
 @GraphElement
 public interface GodExtended extends GodIntermediate {
-    static final ClassInitializer<GodExtended> DEFAULT_INITIALIZER = new DefaultClassInitializer(GodExtended.class);
+    ClassInitializer<GodExtended> DEFAULT_INITIALIZER = new DefaultClassInitializer(GodExtended.class);
 
     @Property("nickname")
     String getNickName();

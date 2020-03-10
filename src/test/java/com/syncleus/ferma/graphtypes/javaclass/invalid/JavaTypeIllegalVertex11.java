@@ -27,8 +27,8 @@ import org.apache.tinkerpop.gremlin.structure.Direction;
  * @author rqpa
  */
 public interface JavaTypeIllegalVertex11 extends JavaTypeVertex {
-    public static final ClassInitializer<JavaTypeIllegalVertex11> DEFAULT_INITIALIZER = new JavaTypeVertexInitializer<>(JavaTypeIllegalVertex11.class);
+    ClassInitializer<JavaTypeIllegalVertex11> DEFAULT_INITIALIZER = new JavaTypeVertexInitializer<>(JavaTypeIllegalVertex11.class);
     
     @Adjacency(label = "implements", direction = Direction.OUT, operation = Adjacency.Operation.SET)
-    public void setImplementedByAll();
+    void setImplementedByAll();
 }

@@ -28,7 +28,7 @@ import org.apache.tinkerpop.gremlin.structure.Direction;
  */
 public interface JavaInterfaceVertex extends JavaTypeVertex {
     
-    public static final ClassInitializer<JavaInterfaceVertex> DEFAULT_INITIALIZER = new JavaTypeVertexInitializer<>(JavaInterfaceVertex.class);
+    ClassInitializer<JavaInterfaceVertex> DEFAULT_INITIALIZER = new JavaTypeVertexInitializer<>(JavaInterfaceVertex.class);
     
     @Incidence(label = "implements", direction = Direction.BOTH, operation = Incidence.Operation.GET)
     EdgeFrame getAnyImplementsEdge();

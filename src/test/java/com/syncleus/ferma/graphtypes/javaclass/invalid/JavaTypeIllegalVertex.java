@@ -31,23 +31,23 @@ import org.apache.tinkerpop.gremlin.structure.Direction;
  * @author rqpa
  */
 public interface JavaTypeIllegalVertex extends JavaTypeVertex {
-    public static final ClassInitializer<JavaTypeIllegalVertex> DEFAULT_INITIALIZER = new JavaTypeVertexInitializer<>(JavaTypeIllegalVertex.class);
+    ClassInitializer<JavaTypeIllegalVertex> DEFAULT_INITIALIZER = new JavaTypeVertexInitializer<>(JavaTypeIllegalVertex.class);
     
     @Incidence(label = "implements", direction = Direction.BOTH)
-    public void addBidirectionalEdgeDefault();
+    void addBidirectionalEdgeDefault();
     
     @Incidence(label = "implements", direction = Direction.BOTH)
-    public void addImplementsTwoDirectionsEdge(ClassInitializer<? extends JavaInterfaceVertex> vertexInitializer);
+    void addImplementsTwoDirectionsEdge(ClassInitializer<? extends JavaInterfaceVertex> vertexInitializer);
     
     @Incidence(label = "implements", direction = Direction.BOTH)
-    public void addImplementsInterfaceTwoDirectionsEdge(
-            ClassInitializer<? extends JavaInterfaceVertex> ifaceInitializer,
-            ClassInitializer<? extends ImplementsEdge> edgeInitializer);
+    void addImplementsInterfaceTwoDirectionsEdge(
+        ClassInitializer<? extends JavaInterfaceVertex> ifaceInitializer,
+        ClassInitializer<? extends ImplementsEdge> edgeInitializer);
     
     @Incidence(label = "extends", direction = Direction.BOTH)
-    public void addExtendsBothDirections(JavaClassVertex other);
+    void addExtendsBothDirections(JavaClassVertex other);
     
     @Incidence(label = "extends", direction = Direction.BOTH)
-    public void addExtendsBothDirections(JavaClassVertex other, ClassInitializer<? extends ExtendsEdge> edgeInitializer);
+    void addExtendsBothDirections(JavaClassVertex other, ClassInitializer<? extends ExtendsEdge> edgeInitializer);
     
 }

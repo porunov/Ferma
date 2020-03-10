@@ -164,19 +164,19 @@ public class AbstractElementFrameTest {
     @Test
     public void testReframe() {
         final TVertex v1 = p1.reframe(TVertex.class);
-        Assert.assertEquals((Long) p1.getId(), (Long) v1.getId());
+        Assert.assertEquals(p1.getId(), v1.getId());
     }
 
     @Test
     public void testReframeExplicitVertex() {
         final TVertex v1 = p1.reframeExplicit(TVertex.class);
-        Assert.assertEquals((Long) p1.getId(), (Long) v1.getId());
+        Assert.assertEquals(p1.getId(), v1.getId());
     }
 
     @Test
     public void testReframeExplicitEdge() {
         final TEdge edgeReframed = e1.reframeExplicit(TEdge.class);
-        Assert.assertEquals((Long) e1.getId(), (Long) edgeReframed.getId());
+        Assert.assertEquals(e1.getId(), edgeReframed.getId());
     }
 
     @Test

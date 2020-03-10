@@ -94,7 +94,7 @@ public class PolymorphicTypeResolver implements TypeResolver {
 
     @Override
     public <T> Class<? extends T> resolve(final Element element, final Class<T> kind) {
-        final Property<String> nodeClazzProperty = element.<String>property(this.typeResolutionKey);
+        final Property<String> nodeClazzProperty = element.property(this.typeResolutionKey);
         final String nodeClazz;
         if( nodeClazzProperty.isPresent() )
             nodeClazz = nodeClazzProperty.value();
@@ -112,7 +112,7 @@ public class PolymorphicTypeResolver implements TypeResolver {
     
     @Override
     public Class<?> resolve(final Element element) {
-        final Property<String> typeResolutionName = element.<String>property(this.typeResolutionKey);
+        final Property<String> typeResolutionName = element.property(this.typeResolutionKey);
 
         if( typeResolutionName.isPresent() )
             return this.reflectionCache.forName(typeResolutionName.value());
@@ -147,10 +147,7 @@ public class PolymorphicTypeResolver implements TypeResolver {
                     return true;
 
                 final String resolvedType = property.value();
-                if( allAllowedValues.contains(resolvedType) )
-                    return false;
-                else
-                    return true;
+                return !allAllowedValues.contains(resolvedType);
             }
         });
     }

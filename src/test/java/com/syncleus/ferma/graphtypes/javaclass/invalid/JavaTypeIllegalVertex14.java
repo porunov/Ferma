@@ -27,8 +27,8 @@ import com.syncleus.ferma.graphtypes.javaclass.JavaTypeVertexInitializer;
  * @author rqpa
  */
 public interface JavaTypeIllegalVertex14 extends JavaTypeVertex {
-    public static final ClassInitializer<JavaTypeIllegalVertex14> DEFAULT_INITIALIZER = new JavaTypeVertexInitializer<>(JavaTypeIllegalVertex14.class);
+    ClassInitializer<JavaTypeIllegalVertex14> DEFAULT_INITIALIZER = new JavaTypeVertexInitializer<>(JavaTypeIllegalVertex14.class);
     
     @Adjacency(label = "implements")
-    public void unresolvableTypeOperation(JavaInterfaceVertex implemented1, JavaInterfaceVertex implemented2);
+    void unresolvableTypeOperation(JavaInterfaceVertex implemented1, JavaInterfaceVertex implemented2);
 }

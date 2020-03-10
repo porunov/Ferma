@@ -18,7 +18,7 @@ package com.syncleus.ferma.annotations;
 import com.syncleus.ferma.*;
 
 public interface FatherEdge extends EdgeFrame {
-    static final ClassInitializer<FatherEdge> DEFAULT_INITIALIZER = new DefaultClassInitializer(FatherEdge.class);
+    ClassInitializer<FatherEdge> DEFAULT_INITIALIZER = new DefaultClassInitializer(FatherEdge.class);
 
     @InVertex
     God getFather();

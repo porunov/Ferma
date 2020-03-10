@@ -104,7 +104,7 @@ public abstract class AbstractElementFrame implements ElementFrame {
 
     @Override
     public <T> T getProperty(final String name) {
-        final Property<T> property = getElement().<T>property(name);
+        final Property<T> property = getElement().property(name);
         if( property.isPresent())
             return property.value();
         else
@@ -150,12 +150,9 @@ public abstract class AbstractElementFrame implements ElementFrame {
             return false;
         final AbstractElementFrame other = (AbstractElementFrame) o;
         if (getElement() == null) {
-            if (other.getElement() != null)
-                return false;
+            return other.getElement() == null;
         }
-        else if (!getElement().equals(other.getElement()))
-            return false;
-        return true;
+        else return getElement().equals(other.getElement());
     }
 
     protected <N> N getId(final Class<N> clazz) {

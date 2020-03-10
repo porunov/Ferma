@@ -38,10 +38,7 @@ public class ReflectionUtility {
         if( propertyAnnotation != null ) {
             final Property.Operation operation = propertyAnnotation.operation();
             if( operation != null && operation != Property.Operation.AUTO ) {
-                if( operation == Property.Operation.GET)
-                    return true;
-                else
-                    return false;
+                return operation == Property.Operation.GET;
             }
         }
 
@@ -49,10 +46,7 @@ public class ReflectionUtility {
         if( incidenceAnnotation != null ) {
             final Incidence.Operation operation = incidenceAnnotation.operation();
             if( operation != null && operation != Incidence.Operation.AUTO ) {
-                if( operation == Incidence.Operation.GET)
-                    return true;
-                else
-                    return false;
+                return operation == Incidence.Operation.GET;
             }
         }
 
@@ -60,10 +54,7 @@ public class ReflectionUtility {
         if( adjacencyAnnotation != null ) {
             final Adjacency.Operation operation = adjacencyAnnotation.operation();
             if( operation != null && operation != Adjacency.Operation.AUTO ) {
-                if( operation == Adjacency.Operation.GET)
-                    return true;
-                else
-                    return false;
+                return operation == Adjacency.Operation.GET;
             }
         }
 
@@ -76,10 +67,7 @@ public class ReflectionUtility {
         if( propertyAnnotation != null ) {
             Property.Operation operation = propertyAnnotation.operation();
             if( operation != null && operation != Property.Operation.AUTO  ) {
-                if( operation == Property.Operation.SET)
-                    return true;
-                else
-                    return false;
+                return operation == Property.Operation.SET;
             }
         }
 
@@ -87,10 +75,7 @@ public class ReflectionUtility {
         if( adjacencyAnnotation != null ) {
             final Adjacency.Operation operation = adjacencyAnnotation.operation();
             if( operation != null && operation != Adjacency.Operation.AUTO ) {
-                if( operation == Adjacency.Operation.SET)
-                    return true;
-                else
-                    return false;
+                return operation == Adjacency.Operation.SET;
             }
         }
 
@@ -102,10 +87,7 @@ public class ReflectionUtility {
         if( propertyAnnotation != null ) {
             Property.Operation operation = propertyAnnotation.operation();
             if( operation != null && operation != Property.Operation.AUTO  ) {
-                if( operation == Property.Operation.REMOVE)
-                    return true;
-                else
-                    return false;
+                return operation == Property.Operation.REMOVE;
             }
         }
 
@@ -113,10 +95,7 @@ public class ReflectionUtility {
         if( incidenceAnnotation != null ) {
             final Incidence.Operation operation = incidenceAnnotation.operation();
             if( operation != null && operation != Incidence.Operation.AUTO ) {
-                if( operation == Incidence.Operation.REMOVE)
-                    return true;
-                else
-                    return false;
+                return operation == Incidence.Operation.REMOVE;
             }
         }
 
@@ -124,10 +103,7 @@ public class ReflectionUtility {
         if( adjacencyAnnotation != null ) {
             final Adjacency.Operation operation = adjacencyAnnotation.operation();
             if( operation != null && operation != Adjacency.Operation.AUTO ) {
-                if( operation == Adjacency.Operation.REMOVE)
-                    return true;
-                else
-                    return false;
+                return operation == Adjacency.Operation.REMOVE;
             }
         }
 
@@ -139,10 +115,7 @@ public class ReflectionUtility {
         if( incidenceAnnotation != null ) {
             final Incidence.Operation operation = incidenceAnnotation.operation();
             if( operation != null && operation != Incidence.Operation.AUTO ) {
-                if( operation == Incidence.Operation.ADD)
-                    return true;
-                else
-                    return false;
+                return operation == Incidence.Operation.ADD;
             }
         }
 
@@ -150,10 +123,7 @@ public class ReflectionUtility {
         if( adjacencyAnnotation != null ) {
             final Adjacency.Operation operation = adjacencyAnnotation.operation();
             if( operation != null && operation != Adjacency.Operation.AUTO ) {
-                if( operation == Adjacency.Operation.ADD)
-                    return true;
-                else
-                    return false;
+                return operation == Adjacency.Operation.ADD;
             }
         }
 

@@ -30,7 +30,7 @@ public interface Tx extends WrappedTransaction {
     /**
      * Thread local that is used to store references to the used graph.
      */
-    public static ThreadLocal<Tx> threadLocalGraph = new ThreadLocal<>();
+    ThreadLocal<Tx> threadLocalGraph = new ThreadLocal<>();
 
     /**
      * Set the nested active transaction for the current thread.
@@ -38,7 +38,7 @@ public interface Tx extends WrappedTransaction {
      * @param tx
      *            Transaction
      */
-    public static void setActive(Tx tx) {
+    static void setActive(Tx tx) {
         Tx.threadLocalGraph.set(tx);
     }
 
@@ -47,7 +47,7 @@ public interface Tx extends WrappedTransaction {
      * 
      * @return Currently active transaction
      */
-    public static Tx getActive() {
+    static Tx getActive() {
         return Tx.threadLocalGraph.get();
     }
 

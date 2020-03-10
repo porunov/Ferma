@@ -65,5 +65,5 @@ public @interface Incidence {
 
     enum Operation {
         GET, ADD, REMOVE, AUTO
-    };
+    }
 }

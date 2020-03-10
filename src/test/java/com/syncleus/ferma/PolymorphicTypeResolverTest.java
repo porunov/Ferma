@@ -29,7 +29,7 @@ import java.util.*;
 
 public class PolymorphicTypeResolverTest {
 
-    private static final Set<Class<?>> TEST_TYPES = new HashSet<>(Arrays.asList(new Class<?>[]{Person.class, Programmer.class}));
+    private static final Set<Class<?>> TEST_TYPES = new HashSet<>(Arrays.asList(Person.class, Programmer.class));
     private static final String TEST_MODEL_PACKAGE = "com.syncleus.ferma";
     private static final String CUSTOM_TYPE_KEY = "some_custom_type_key";
 
